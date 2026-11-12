@@ -1,0 +1,205 @@
+/* Global */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d0f2d;
+  color: #fff;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 15px 30px;
+  background-color: #0d0f2d;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+}
+/* Navigation */
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header {
+  position: relative;
+  min-height: 90vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Headerbild */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/images/header.png") center / cover;
+  opacity: 0.3;
+}
+
+/* Headertext */
+header h1 {
+  position: relative;
+  font-size: 36px;
+  color: white;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+/* main */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Bildserie */
+.bild-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.bild-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Bildjämförelse */
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.compare-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Om mig */
+.about {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.portrait {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 1px white solid;
+  box-shadow:   0px 0px 20px 3px rgb(165, 174, 255);;
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .portrait {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-grid img {
+    height: auto;
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+
+  color: #fff;
+}
+
+/* Mobil */
+@media (max-width: 700px) {
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+  }
+  nav ul {
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .logo {
+    width: 55px;
+  }
+
+  header {
+    min-height: 200px;
+  }
+
+  header h1 {
+    font-size: 28px;
+  }
+
+  main {
+    margin: 20px auto;
+    padding: 0 15px;
+  }
+
+  .bild-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bild-grid img {
+    height: auto;
+  }
+}
